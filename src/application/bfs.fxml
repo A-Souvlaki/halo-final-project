@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BFSController">
+   <center>
+      <Pane prefHeight="537.0" prefWidth="903.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="539.0" fitWidth="978.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../files/valhalla.jpg" />
+               </image>
+            </ImageView>
+            <Circle fill="#ecedee" layoutX="846.0" layoutY="46.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="842.0" layoutY="269.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="643.0" layoutY="140.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="540.0" layoutY="150.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="492.0" layoutY="317.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="444.0" layoutY="116.0" radius="24.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="465.0" layoutY="386.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="479.0" layoutY="448.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="386.0" layoutY="307.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="386.0" layoutY="362.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="330.0" layoutY="212.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#ecedee" layoutX="97.0" layoutY="279.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+            <Line endX="208.47607421875" endY="-40.0" layoutX="101.0" layoutY="259.0" startX="16.47607421875" startY="13.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="254.47607421875" endY="90.0" layoutX="111.0" layoutY="269.0" startX="6.47607421875" startY="16.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="190.47607421875" endY="-233.0" layoutX="121.0" layoutY="279.0" startX="-22.52392578125" startY="-21.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="488.0" endY="-149.0" layoutX="131.0" layoutY="289.0" startX="182.597412109375" startY="-245.12132263183594" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="95.47607421875" endY="-53.0" layoutX="331.0" layoutY="187.0" startX="16.47607421875" startY="13.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="109.47607421875" endY="-57.0" layoutX="341.0" layoutY="197.0" startX="143.47607421875" startY="96.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="309.47607421875" endY="-50.0" layoutX="351.0" layoutY="207.0" startX="467.0" startY="50.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="484.47607421875" endY="-148.0" layoutX="361.0" layoutY="217.0" startX="481.0" startY="28.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="155.47607421875" endY="101.0" layoutX="361.0" layoutY="217.0" startX="457.0" startY="60.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="173.47607421875" endY="-43.0" layoutX="361.0" layoutY="217.0" startX="143.47607421875" startY="79.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="123.47607421875" endY="159.0" layoutX="351.0" layoutY="207.0" startX="135.47607421875" startY="133.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="136.47607421875" endY="223.0" layoutX="361.0" layoutY="217.0" startX="466.47607421875" startY="71.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="18.47607421875" endY="69.0" layoutX="361.0" layoutY="217.0" startX="-17.52392578125" startY="13.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Line endX="304.47607421875" endY="-87.0" layoutX="361.0" layoutY="217.0" startX="465.47607421875" startY="-157.0" stroke="#0a0a0a" strokeWidth="3.0" />
+            <Label layoutX="36.0" layoutY="484.0" text="Inicio">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="inicio" layoutX="93.0" layoutY="485.0" prefHeight="25.0" prefWidth="30.0" />
+            <Label layoutX="137.0" layoutY="484.0" text="Fin">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fin" layoutX="175.0" layoutY="485.0" prefHeight="25.0" prefWidth="30.0" />
+            <Button layoutX="225.0" layoutY="485.0" mnemonicParsing="false" onAction="#accion" text="BFS" />
+            <Text fx:id="g1" layoutX="92.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g12" layoutX="322.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g5" layoutX="382.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g4" layoutX="382.0" layoutY="367.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g6" layoutX="461.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g7" layoutX="475.0" layoutY="453.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g11" layoutX="484.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g8" layoutX="440.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g9" layoutX="536.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g10" layoutX="635.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g2" layoutX="838.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="g3" layoutX="842.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Button layoutX="270.0" layoutY="485.0" mnemonicParsing="false" onAction="#camino" text="Camino" />
+            <Label layoutX="13.0" layoutY="61.0" text="CORTANA'S DATA BASE" textFill="WHITE">
+               <font>
+                  <Font name="Lucida Console" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="estado" layoutX="14.0" layoutY="88.0" text="Executing..." textFill="#fcf9f9" visible="false">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="336.0" layoutY="485.0" mnemonicParsing="false" onAction="#reiniciar" text="Reiniciar" />
+            <Button fx:id="volver" layoutX="409.0" layoutY="485.0" mnemonicParsing="false" text="Regresar" />
+            <Label layoutX="34.0" layoutY="447.0" text="Haz clic izq sobre dos números." textFill="#070000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
